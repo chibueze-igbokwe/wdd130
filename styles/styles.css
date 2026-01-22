@@ -1,21 +1,23 @@
+/* Universal Selector Rule */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* ==============================
-   CSS Variables (Define at the top)
+   CSS Variables
    ============================== */
 :root {
     --nav-bg-color: darkblue;
     --nav-link-color: white;
-
     --heading-color: darkblue;
-
     --main-img-border-color: black;
     --main-img-box-shadow: 0 0 30px gray;
     --main-img-padding: 2px;
     --main-img-width: 150px;
-
     --p-padding: 0;
-
     --main-max-width: 800px;
-
     --aside-width: 300px;
     --aside-margin: 20px auto;
     --aside-border-color: #333;
@@ -23,7 +25,6 @@
     --aside-bg-color: #f0f0f0;
     --aside-text-color: #000;
     --aside-img-width: 200px;
-
     --footer-margin-top: 20px;
     --footer-border-color: #333;
 }
@@ -34,12 +35,15 @@
 nav {
     background-color: var(--nav-bg-color);
     padding: 10px;
+    display: flex;
+    /* Added for better link layout */
 }
 
 nav a {
     color: var(--nav-link-color);
     display: block;
     padding: 20px;
+    text-decoration: none;
 }
 
 /* ==============================
@@ -58,6 +62,9 @@ main img {
     border: 1px solid var(--main-img-border-color);
     padding: var(--main-img-padding);
     box-shadow: var(--main-img-box-shadow);
+    float: right;
+    /* Floated image to the right */
+    margin-left: 1rem;
 }
 
 /* ==============================
@@ -65,6 +72,7 @@ main img {
    ============================== */
 p {
     padding: var(--p-padding);
+    line-height: 1.5;
 }
 
 /* ==============================
@@ -73,7 +81,6 @@ p {
 main {
     max-width: var(--main-max-width);
     margin: 0 auto;
-    /* center main */
 }
 
 /* ==============================
@@ -82,17 +89,24 @@ main {
 aside {
     width: var(--aside-width);
     margin: var(--aside-margin);
-    border: 1px solid var(--aside-border-color);
-    padding: var(--aside-padding);
-    background-color: var(--aside-bg-color);
-    color: var(--aside-text-color);
+    position: relative;
+    /* Required for absolute positioning of h2 */
+    text-align: center;
 }
 
-/* Image inside aside */
+/* Overlay the heading on the image */
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+}
+
 aside img {
     width: var(--aside-img-width);
     height: auto;
-    /* preserves aspect ratio */
 }
 
 /* ==============================
@@ -102,4 +116,16 @@ footer {
     margin-top: var(--footer-margin-top);
     border-top: 1px solid var(--footer-border-color);
     text-align: center;
+    padding: 1rem;
+}
+
+/* ==============================
+   Class Selectors 
+   ============================== */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
