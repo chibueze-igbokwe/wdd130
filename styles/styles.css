@@ -1,64 +1,105 @@
-/* Navigation styles */
+/* ==============================
+   CSS Variables (Define at the top)
+   ============================== */
+:root {
+    --nav-bg-color: darkblue;
+    --nav-link-color: white;
+
+    --heading-color: darkblue;
+
+    --main-img-border-color: black;
+    --main-img-box-shadow: 0 0 30px gray;
+    --main-img-padding: 2px;
+    --main-img-width: 150px;
+
+    --p-padding: 0;
+
+    --main-max-width: 800px;
+
+    --aside-width: 300px;
+    --aside-margin: 20px auto;
+    --aside-border-color: #333;
+    --aside-padding: 10px;
+    --aside-bg-color: #f0f0f0;
+    --aside-text-color: #000;
+    --aside-img-width: 200px;
+
+    --footer-margin-top: 20px;
+    --footer-border-color: #333;
+}
+
+/* ==============================
+   Navigation styles
+   ============================== */
 nav {
-    background-color: darkblue;
+    background-color: var(--nav-bg-color);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--nav-link-color);
     display: block;
     padding: 20px;
 }
 
-/* Heading styles */
+/* ==============================
+   Heading styles
+   ============================== */
 h1 {
-    color: darkblue;
+    color: var(--heading-color);
 }
 
-/* Profile image in main */
+/* ==============================
+   Profile image in main
+   ============================== */
 main img {
-    width: 150px;
+    width: var(--main-img-width);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: 1px solid var(--main-img-border-color);
+    padding: var(--main-img-padding);
+    box-shadow: var(--main-img-box-shadow);
 }
 
-/* Paragraphs */
+/* ==============================
+   Paragraphs
+   ============================== */
 p {
-    padding: 0;
-    /* reset padding for the new requirement */
+    padding: var(--p-padding);
 }
 
-/* Limit main content width */
+/* ==============================
+   Limit main content width
+   ============================== */
 main {
-    max-width: 800px;
+    max-width: var(--main-max-width);
     margin: 0 auto;
     /* center main */
 }
 
-/* Aside section */
+/* ==============================
+   Aside section
+   ============================== */
 aside {
-    width: 300px;
-    margin: 20px auto;
-    border: 1px solid #333;
-    padding: 10px;
-    background-color: #f0f0f0;
-    color: #000;
+    width: var(--aside-width);
+    margin: var(--aside-margin);
+    border: 1px solid var(--aside-border-color);
+    padding: var(--aside-padding);
+    background-color: var(--aside-bg-color);
+    color: var(--aside-text-color);
 }
 
 /* Image inside aside */
 aside img {
-    width: 200px;
+    width: var(--aside-img-width);
     height: auto;
     /* preserves aspect ratio */
 }
 
-/* Footer styling */
+/* ==============================
+   Footer styling
+   ============================== */
 footer {
-    margin-top: 20px;
-    /* space above footer */
-    border-top: 1px solid #333;
-    /* top border for separation */
+    margin-top: var(--footer-margin-top);
+    border-top: 1px solid var(--footer-border-color);
     text-align: center;
 }
