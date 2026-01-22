@@ -1,0 +1,114 @@
+/* wwr/styles/rafting.css */
+
+/* ==============================
+   Variables & Reset
+   ============================== */
+:root {
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   General Layout
+   ============================== */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ==============================
+   Hero Section Styling (Absolute Positioning)
+   ============================== */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Overlay H1 on the hero image */
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.7);
+    /* Using accent1 with opacity */
+    color: #fff;
+}
+
+/* Overlay Article on the hero image */
+.hero article {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin: 0 0 10px 10px;
+    border: 2px solid var(--primary-color);
+}
+
+/* ==============================
+   Footer & Social Media
+   ============================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--accent1-color);
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+}
