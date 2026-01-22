@@ -1,7 +1,5 @@
-/* wwr/styles/rafting.css */
-
 /* ==============================
-   Variables & Reset
+   1. CSS Variables in :root
    ============================== */
 :root {
     --primary-color: #055a05;
@@ -16,18 +14,19 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* ==============================
+   2. Reset & General Styles
+   ============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ==============================
-   General Layout
-   ============================== */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.6;
 }
 
 header,
@@ -52,7 +51,35 @@ article {
 }
 
 /* ==============================
-   Hero Section Styling (Absolute Positioning)
+   3. Header & Navigation
+   ============================== */
+header {
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* ==============================
+   4. Hero Section with Overlays
    ============================== */
 .hero {
     position: relative;
@@ -64,26 +91,24 @@ article {
     height: auto;
 }
 
-/* Overlay H1 on the hero image */
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.7);
-    /* Using accent1 with opacity */
+    background-color: rgba(38, 70, 83, 0.8);
     color: #fff;
 }
 
-/* Overlay Article on the hero image */
 .hero article {
     position: absolute;
     top: 150px;
     right: 50px;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
+    border: 4px solid var(--accent2-color);
     border-radius: 8px;
 }
 
@@ -95,12 +120,14 @@ h1 {
 }
 
 /* ==============================
-   Footer & Social Media
-   ============================= */
+   5. Footer & Social Media
+   ============================== */
 footer {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid var(--accent1-color);
+    margin-top: 20px;
+    border-top: 5px solid var(--primary-color);
+    background-color: #fdf6e3;
 }
 
 .socialmedia a {
@@ -108,7 +135,7 @@ footer {
 }
 
 .socialmedia img {
-    width: 40px;
+    width: 32px;
     height: auto;
     margin: 0 10px;
 }
