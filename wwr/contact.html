@@ -1,0 +1,158 @@
+<!-- wwr/contact.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Updated meta description for Contact page -->
+    <meta name="description"
+      content="Contact White Water Rafting Co. for reservations, questions, or general inquiries. Find our location, meet our team, and send us a message.">
+
+    <meta name="author" content="Chibueze Igbokwe">
+    <title>Contact Us | White Water Rafting Co.</title>
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <!-- Header stays the same -->
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Company Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1 class="page-title">Contact Us</h1>
+
+        <!-- Two-column layout -->
+        <div class="contact-layout">
+
+            <!-- LEFT: Company Info -->
+            <section class="contact-info">
+                <h2>Company Information</h2>
+
+                <p><strong>Address:</strong><br>
+                    123 River Bend Road<br>
+                    Adventure City, USA
+                </p>
+
+                <p><strong>Phone:</strong><br>
+                    +1 (555) 123-4567
+                </p>
+
+                <p><strong>Email:</strong><br>
+                    info@whitewaterraftingco.com
+                </p>
+
+                <!-- Google Map (no inline CSS) -->
+                <div>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2161.297271125317!2d3.2915258597664883!3d6.542309126401269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1770024077880!5m2!1sen!2sng"
+                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <!-- RIGHT: Contact Form -->
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+
+                <form action="#" method="post">
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <fieldset>
+                        <legend>Purpose of Message</legend>
+
+                        <label>
+                            <input type="radio" name="purpose" value="general" required>
+                            General Inquiry
+                        </label>
+
+                        <label>
+                            <input type="radio" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+
+                        <label>
+                            <input type="radio" name="purpose" value="website">
+                            Website Suggestion
+                        </label>
+                    </fieldset>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label class="checkbox">
+                        <input type="checkbox" name="subscribe">
+                        Please subscribe me to the monthly newsletter
+                    </label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Employee Profiles -->
+        <section class="employees">
+            <h2>Our Team</h2>
+
+            <div class="employee-gallery">
+                <figure>
+                    <img src="images/employeeAvatar.jpg" alt="John Doe - Lead Guide">
+                    <figcaption>John Doe<br>Lead Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employeeAvatar.jpg" alt="Jane Smith - Safety Officer">
+                    <figcaption>Jane Smith<br>Safety Officer</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employeeAvatar.jpg" alt="Mike Johnson - Operations Manager">
+                    <figcaption>Mike John<br>Operations Manager</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer stays the same -->
+    <footer>
+        <p>© 2026 White Water Rafting Co. | Chibueze Igbokwe</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
